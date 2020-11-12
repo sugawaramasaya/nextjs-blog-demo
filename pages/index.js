@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
@@ -11,6 +13,25 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section>
+        <div
+          sx={{
+            fontSize: 11,
+            fontWeight: 'bold',
+
+            color: 'primary',
+          }}
+        >
+          sx Propキター！
+        </div>
+        <div sx={{ bg: 'purple.9', borderRadius: 4, p: 7, my: 7 }}>
+          <div
+            sx={{ fontSize: [2, 4, 8], textAlign: 'center', color: 'purple.0' }}
+          >
+            わっはっは
+          </div>
+        </div>
+      </section>
       <section className={utilStyles.headingMd}>
         <p>
           Hello, I'm <strong>Masaya</strong>. I'm a Web designer, director. You

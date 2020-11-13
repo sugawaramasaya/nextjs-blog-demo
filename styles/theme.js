@@ -205,7 +205,7 @@ export default {
   // transitions: [],
   breakpoints: ['768px', '1024px', '1056px'],
 
-  // Container
+  // Theme UIのContainerのVariants
   layout: {
     container: {
       maxWidth: '1024px',

@@ -204,4 +204,13 @@ export default {
   zIndices: { flash: 2000 },
   // transitions: [],
   breakpoints: ['768px', '1024px', '1056px'],
+
+  // Theme UIのContainerのVariants
+  layout: {
+    container: {
+      maxWidth: '1024px',
+      width: 'auto',
+      mx: [5, 5, 5, 'auto'],
+    },
+  },
 };

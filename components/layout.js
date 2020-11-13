@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import { Container } from 'theme-ui';
 
 const name = 'SUGAWARA Masaya';
 export const siteTitle = 'Next.js First Step';
@@ -55,11 +56,13 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
+        <Container>
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        </Container>
       )}
     </>
   );

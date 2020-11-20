@@ -5,153 +5,153 @@ export default {
   fontSizes: [12, 14, 16, 18, 20, 24, 28, 32, 36, 42, 48, 54, 60, 68, 76, 84, 92],
   colors: {
     white: '#ffffff',
-    black: '#212121',
-    text: '#212121',
-    lower: '#757575',
-    primary: '#2A7DE1',
-    secondary: '#763F7F',
-    success: '#2BA162',
-    warning: '#FCBC2B',
-    danger: '#FB4D3D',
-    focus: '#2A7DE1',
-    placeholder: '#9E9E9E',
-    background: '#FAFAFA',
-    line: '#E0E0E0',
-    disabled: '#E0E0E0',
-    enabled: '#757575',
-    attention: '#FB4D3D',
-    muted: '#E0E0E0',
+    black: '#000000',
+    text: '#000000',
+    lower: '#737373',
+    primary: '#0000ff',
+    secondary: '#5c4742',
+    success: '#2b9720',
+    warning: '#ff9505',
+    danger: '#d00000',
+    focus: '#0000ff',
+    placeholder: '#A6A6A6',
+    background: '#F2F2F2',
+    line: '#D9D9D9',
+    disabled: '#D9D9D9',
+    enabled: '#737373',
+    attention: '#d00000',
+    muted: '#D9D9D9',
     red: [
-      '#FB4D3D', // 900
-      '#FB5F50', // 800
-      '#FC7164', // 700
-      '#FC8277', // 600
-      '#FD948B', // 500
-      '#FDA69E', // 400
-      '#FDB8B1', // 300
-      '#FECAC5', // 200
-      '#FEDBD8', // 100
-      '#FEE4E2', // 50
+      '#d00000', // 900
+      '#d51a1a', // 800
+      '#d93333', // 700
+      '#de4d4d', // 600
+      '#e36666', // 500
+      '#e88080', // 400
+      '#ec9999', // 300
+      '#f1b2b2', // 200
+      '#f1b2b2', // 100
+      '#f3bfbf', // 50
     ],
     pink: [
-      '#EC5F87', // 900
-      '#EE6F93', // 800
-      '#F07F9F', // 700
-      '#F28FAB', // 600
-      '#F49FB7', // 500
-      '#F6AFC3', // 400
-      '#F7BFCF', // 300
-      '#F9CFDB', // 200
-      '#FBDFE7', // 100
-      '#FDEFF3', // 50
+      '#f0386b', // 900
+      '#f24c7a', // 800
+      '#f36089', // 700
+      '#f57497', // 600
+      '#f688a6', // 500
+      '#f89cb5', // 400
+      '#f9afc4', // 300
+      '#fac3d3', // 200
+      '#fac3d3', // 100
+      '#fbcdda', // 50
     ],
     purple: [
-      '#763F7F', // 900
-      '#84528C', // 800
-      '#916599', // 700
-      '#9F79A5', // 600
-      '#AD8CB2', // 500
-      '#BB9FBF', // 400
-      '#C8B2CC', // 300
-      '#D6C5D9', // 200
-      '#E4D9E5', // 100
-      '#F1ECF2', // 50
+      '#731963', // 900
+      '#813073', // 800
+      '#8f4782', // 700
+      '#9d5e92', // 600
+      '#ab75a1', // 500
+      '#b98cb1', // 400
+      '#c7a3c1', // 300
+      '#d5bad0', // 200
+      '#d5bad0', // 100
+      '#dcc6d8', // 50
     ],
     indigo: [
-      '#006BA6', // 900
-      '#1A7AAF', // 800
-      '#3389B8', // 700
-      '#4D97C1', // 600
-      '#66A6CA', // 500
-      '#80B5D3', // 400
-      '#99C4DB', // 300
-      '#B2D3E4', // 200
-      '#CCE1ED', // 100
-      '#D9E9F2', // 50
+      '#255c99', // 900
+      '#3b6ca3', // 800
+      '#517dad', // 700
+      '#668db8', // 600
+      '#7c9dc2', // 500
+      '#92aecc', // 400
+      '#a8bed6', // 300
+      '#becee0', // 200
+      '#becee0', // 100
+      '#c9d6e6', // 50
     ],
     blue: [
-      '#2A7DE1', // 900
-      '#3F8AE4', // 800
-      '#5597E7', // 700
-      '#6AA4EA', // 600
-      '#7FB1ED', // 500
-      '#95BEF0', // 400
-      '#AACBF3', // 300
-      '#BFD8F6', // 200
-      '#D4E5F9', // 100
-      '#EAF2FC', // 50
+      '#0000ff', // 900
+      '#1a1aff', // 800
+      '#3333ff', // 700
+      '#4d4dff', // 600
+      '#6666ff', // 500
+      '#8080ff', // 400
+      '#9999ff', // 300
+      '#b2b2ff', // 200
+      '#b2b2ff', // 100
+      '#bfbfff', // 50
     ],
     green: [
-      '#2BA162', // 900
-      '#40AA72', // 800
-      '#55B481', // 700
-      '#6BBD91', // 600
-      '#80C7A1', // 500
-      '#95D0B1', // 400
-      '#AAD9C0', // 300
-      '#BFE3D0', // 200
-      '#D5ECE0', // 100
-      '#EAF6EF', // 50
+      '#2b9720', // 900
+      '#40a136', // 800
+      '#55ac4d', // 700
+      '#6bb663', // 600
+      '#80c179', // 500
+      '#95cb90', // 400
+      '#aad5a6', // 300
+      '#bfe0bc', // 200
+      '#bfe0bc', // 100
+      '#cae5c7', // 50
     ],
     yellow: [
-      '#FCBC2B', // 900
-      '#FCC340', // 800
-      '#FDC955', // 700
-      '#FDD06B', // 600
-      '#FDD780', // 500
-      '#FEDE95', // 400
-      '#FEE4AA', // 300
-      '#FEEBBF', // 200
-      '#FEF2D5', // 100
-      '#FFF8EA', // 50
+      '#f9e900', // 900
+      '#faeb1a', // 800
+      '#faed33', // 700
+      '#fbf04d', // 600
+      '#fbf266', // 500
+      '#fcf480', // 400
+      '#fdf699', // 300
+      '#fdf8b2', // 200
+      '#fdf8b2', // 100
+      '#fefabf', // 50
     ],
     orange: [
-      '#F8772D', // 900
-      '#F98542', // 800
-      '#F99257', // 700
-      '#FAA06C', // 600
-      '#FBAD81', // 500
-      '#FCBB96', // 400
-      '#FCC9AB', // 300
-      '#FDD6C0', // 200
-      '#FEE4D5', // 100
-      '#FEF1EA', // 50
+      '#ff9505', // 900
+      '#ffa01e', // 800
+      '#ffaa37', // 700
+      '#ffb550', // 600
+      '#ffbf69', // 500
+      '#ffca82', // 400
+      '#ffd59b', // 300
+      '#ffdfb4', // 200
+      '#ffdfb4', // 100
+      '#ffe5c1', // 50
     ],
     brown: [
-      '#8A716A', // 900
-      '#967F79', // 800
-      '#A18D88', // 700
-      '#AD9C97', // 600
-      '#B9AAA6', // 500
-      '#C4B8B4', // 400
-      '#D0C6C3', // 300
-      '#DCD4D2', // 200
-      '#E8E3E1', // 100
-      '#EDEAE9', // 50
+      '#5c4742', // 900
+      '#6c5955', // 800
+      '#7d6c68', // 700
+      '#8d7e7b', // 600
+      '#9d918e', // 500
+      '#aea3a1', // 400
+      '#beb5b3', // 300
+      '#cec8c6', // 200
+      '#cec8c6', // 100
+      '#d6d1d0', // 50
     ],
     lightBrown: [
-      '#DBD5B5', // 900
-      '#DFD9BC', // 800
-      '#E2DDC4', // 700
-      '#E6E2CB', // 600
-      '#E9E6D3', // 500
-      '#EDEADA', // 400
-      '#F1EEE1', // 300
-      '#F4F2E9', // 200
-      '#F8F7F0', // 100
-      '#FAF9F4', // 50
+      '#bcaa99', // 900
+      '#c3b3a3', // 800
+      '#c9bbad', // 700
+      '#d0c4b8', // 600
+      '#d7ccc2', // 500
+      '#ded4cc', // 400
+      '#e4ddd6', // 300
+      '#ebe5e0', // 200
+      '#ebe5e0', // 100
+      '#eeeae6', // 50
     ],
     grey: [
-      '#212121', // 900
-      '#424242', // 800
-      '#616161', // 700
-      '#757575', // 600
-      '#9E9E9E', // 500
-      '#BDBDBD', // 400
-      '#E0E0E0', // 300
-      '#EEEEEE', // 200
-      '#F5F5F5', // 100
-      '#FAFAFA', // 50
+      '#000000', // 900
+      '#262626', // 800
+      '#404040', // 700
+      '#595959', // 600
+      '#737373', // 500
+      '#8c8c8c', // 400
+      '#a6a6a6', // 300
+      '#bfbfbf', // 200
+      '#d9d9d9', // 100
+      '#f2f2f2', // 50
     ],
     blueGrey: [
       '#616688', // 900
@@ -165,14 +165,24 @@ export default {
       '#DFE0E7', // 100
       '#EFF0F3', // 50
     ],
+    darkRed: ['#a60000'],
+    darkPink: ['#c02d56'],
+    darkPurple: ['#5c144f'],
+    darkIndigo: ['#1e4a7a'],
+    darkBlue: ['#0000cc'],
+    darkGreen: ['#22791a'],
+    darkYellow: ['#c7ba00'],
+    darkOrange: ['#cc7704'],
+    darkBrown: ['#4a3935'],
+    darkLightBrown: ['#96887a'],
+    darkBlueGray: ['#4e526d'],
   },
   fonts: {
     body:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
+      "'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'sans-serif'",
     heading:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
-    monospace:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
+      "'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'sans-serif'",
+    monospace: 'monospace, serif',
   },
   fontWeights: {
     body: 400,

@@ -168,11 +168,10 @@ export default {
   },
   fonts: {
     body:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
+      "'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'sans-serif'",
     heading:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
-    monospace:
-      "-apple-system, BlinkMacSystemFont, 'Helvetica Neue','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ', sans-serif",
+      "'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,'sans-serif'",
+    monospace: 'monospace, serif',
   },
   fontWeights: {
     body: 400,

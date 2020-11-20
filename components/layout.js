@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Container } from 'theme-ui';
 
 const name = 'SUGAWARA Masaya';
-export const siteTitle = 'Next.js First Step';
+export const siteTitle = 'Next.jsの勉強を生中継するブログ';
 
 export default function Layout({ children, home }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="老兵WebデザイナーがNext.jsの勉強を生中継するブログ"
         />
         <meta
           property="og:image"

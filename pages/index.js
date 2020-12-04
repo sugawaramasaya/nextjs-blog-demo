@@ -6,6 +6,7 @@ import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { Heading1, Body1, Caption } from '../components/typography';
 
 export default function Home({ allPostsData }) {
   return (
@@ -15,11 +16,13 @@ export default function Home({ allPostsData }) {
       </Head>
       <Container>
         <section>
+          <Heading1>見出しだぞう！</Heading1>
+          <Body1>本文だぞう！</Body1>
+          <Caption>キャプションだぞう！</Caption>
           <div
             sx={{
               fontSize: 11,
               fontWeight: 'bold',
-
               color: 'primary',
             }}
           >

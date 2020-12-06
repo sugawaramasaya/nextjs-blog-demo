@@ -1,4 +1,4 @@
-export default {
+const theme = {
   disableStyledSystemCache: true,
   space: [0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96, 160, 256],
   // prettier-ignore
@@ -212,26 +212,6 @@ export default {
   // transitions: [],
   breakpoints: ['768px', '1024px', '1056px'],
 
-  styles: {
-    root: {
-      fontFamily: 'body',
-      color: 'text',
-      bg: 'white',
-    },
-    h1: {
-      fontSize: [4, 5, 6],
-      color: 'black',
-    },
-    a: {
-      color: 'primary',
-      textDecoration: 'none',
-      ':hover': {
-        color: 'secondary',
-        textDecoration: 'underline',
-      },
-    },
-  },
-
   // Theme UIのContainerのVariants
   layout: {
     container: {
@@ -241,3 +221,29 @@ export default {
     },
   },
 };
+
+theme.styles = {
+  root: {
+    fontFamily: 'body',
+    color: 'text',
+    bg: 'white',
+  },
+  h1: {
+    fontSize: [4, 5, 6],
+    color: 'black',
+  },
+  a: {
+    color: 'orange.0',
+    textDecoration: 'none',
+    ':hover': {
+      color: 'orange.0',
+      textDecoration: 'underline',
+    },
+  },
+  button: {
+    bg: 'primary',
+    color: 'white',
+  },
+};
+
+export default theme;

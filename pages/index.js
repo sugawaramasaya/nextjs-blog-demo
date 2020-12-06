@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <Container>
-        <Link href="/posts/2011_isetan_christmas">
+        <Link href="/works/2011_isetan_christmas">
           <a>ISETAN CHRISTMAS CAMPAIGN 2011</a>
         </Link>
         <section>

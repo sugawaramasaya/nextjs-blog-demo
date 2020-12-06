@@ -199,9 +199,9 @@ export default {
   },
   // sizes: [],
   // borders: [],
-  borderWidths: [1, 2, 4, 6, 8],
+  borderWidths: [0, 1, 2, 4, 6, 8],
   // borderStyles: [],
-  radii: [2, 4, 8, 16, 9999, '100%'],
+  radii: [0, 2, 4, 8, 16, 9999],
   shadows: {
     raised: '0 1px 3px rgba(0, 0, 0, 0.25)',
     floating: '0 2px 6px rgba(0, 0, 0, 0.25)',

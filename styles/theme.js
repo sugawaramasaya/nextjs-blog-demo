@@ -212,6 +212,26 @@ export default {
   // transitions: [],
   breakpoints: ['768px', '1024px', '1056px'],
 
+  styles: {
+    root: {
+      fontFamily: 'body',
+      color: 'text',
+      bg: 'white',
+    },
+    h1: {
+      fontSize: [4, 5, 6],
+      color: 'black',
+    },
+    a: {
+      color: 'primary',
+      textDecoration: 'none',
+      ':hover': {
+        color: 'secondary',
+        textDecoration: 'underline',
+      },
+    },
+  },
+
   // Theme UIのContainerのVariants
   layout: {
     container: {

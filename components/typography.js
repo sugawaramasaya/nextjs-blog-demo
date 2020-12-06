@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import { Heading, Text, Label } from 'theme-ui';
 
 export const Heading1 = ({ sx, ...props }) => (

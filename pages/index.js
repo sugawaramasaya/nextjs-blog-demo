@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { Container } from 'theme-ui';
+import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
@@ -15,6 +14,9 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <Container>
+        <Link href="/posts/2011_isetan_christmas">
+          <a>ISETAN CHRISTMAS CAMPAIGN 2011</a>
+        </Link>
         <section>
           <Heading1>見出しだぞう！</Heading1>
           <Body1>本文だぞう！</Body1>

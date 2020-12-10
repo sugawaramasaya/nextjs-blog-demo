@@ -1,4 +1,4 @@
-export default {
+const theme = {
   disableStyledSystemCache: true,
   space: [0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96, 160, 256],
   // prettier-ignore
@@ -186,25 +186,22 @@ export default {
   },
   fontWeights: {
     body: 400,
-    heading: 400,
+    heading: 700,
     bold: 700,
   },
   lineHeights: {
-    display: 1.2,
-    heading: 1.5,
-    body1: 1.75,
-    body2: 1.5,
-    caption: 1.5,
-    overline: 1.2,
-    list: 1.2,
-    button: 1.2,
+    body: 1.5,
+    heading: 1.125,
   },
-  letterSpacings: ['0.1em', '-0.015em'],
+  letterSpacings: {
+    body: 'normal',
+    caps: '0.2em',
+  },
   // sizes: [],
   // borders: [],
   borderWidths: [0, 1, 2, 4, 6, 8],
   // borderStyles: [],
-  radii: [0, 2, 4, 8, 16, 9999, '100%'],
+  radii: [0, 2, 4, 8, 16, 9999],
   shadows: {
     raised: '0 1px 3px rgba(0, 0, 0, 0.25)',
     floating: '0 2px 6px rgba(0, 0, 0, 0.25)',
@@ -224,3 +221,29 @@ export default {
     },
   },
 };
+
+theme.styles = {
+  root: {
+    fontFamily: 'body',
+    color: 'text',
+    bg: 'white',
+  },
+  h1: {
+    fontSize: [4, 5, 6],
+    color: 'black',
+  },
+  a: {
+    color: 'orange.0',
+    textDecoration: 'none',
+    ':hover': {
+      color: 'orange.0',
+      textDecoration: 'underline',
+    },
+  },
+  button: {
+    bg: 'primary',
+    color: 'white',
+  },
+};
+
+export default theme;

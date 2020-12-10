@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { Container } from 'theme-ui';
+import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { Heading1, Body1, Caption } from '../components/typography';
 
 export default function Home({ allPostsData }) {
   return (
@@ -14,12 +14,17 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <Container>
+        <Link href="/works/css_pattern">
+          <a>3種のCSS</a>
+        </Link>
         <section>
+          <Heading1>見出しだぞう！</Heading1>
+          <Body1>本文だぞう！</Body1>
+          <Caption>キャプションだぞう！</Caption>
           <div
             sx={{
               fontSize: 11,
               fontWeight: 'bold',
-
               color: 'primary',
             }}
           >

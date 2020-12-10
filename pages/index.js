@@ -14,8 +14,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <Container>
-        <Link href="/works/2011_isetan_christmas">
-          <a>ISETAN CHRISTMAS CAMPAIGN 2011</a>
+        <Link href="/works/css_pattern">
+          <a>3種のCSS</a>
         </Link>
         <section>
           <Heading1>見出しだぞう！</Heading1>

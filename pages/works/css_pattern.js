@@ -3,7 +3,7 @@ import { jsx, Styled, Container } from 'theme-ui';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import { Heading1, Body1, Caption } from '../../components/typography';
+import { Heading1, Body1, Body2, Caption } from '../../components/typography';
 
 const CSSPattern = ({}) => {
   return (

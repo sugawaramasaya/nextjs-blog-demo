@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import { Heading1, Body1, Caption } from '../../components/typography';
 
-export default function CSSPattern({}) {
+const CSSPattern = ({}) => {
   return (
     <Layout>
       <Head>
@@ -36,4 +36,6 @@ export default function CSSPattern({}) {
       </article>
     </Layout>
   );
-}
+};
+
+export default CSSPattern;

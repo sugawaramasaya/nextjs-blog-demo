@@ -5,6 +5,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+export const siteTitle = 'Next.jsの勉強を生中継するブログ';
+
 const name = 'SUGAWARA Masaya';
 
 const NavLink = ({ href, title, mr }) => (
@@ -13,9 +15,7 @@ const NavLink = ({ href, title, mr }) => (
   </Link>
 );
 
-export const siteTitle = 'Next.jsの勉強を生中継するブログ';
-
-export default function Layout({ children, home }) {
+const Layout = ({ children, home }) => {
   return (
     <>
       <Head>
@@ -88,4 +88,6 @@ export default function Layout({ children, home }) {
       )}
     </>
   );
-}
+};
+
+export default Layout;

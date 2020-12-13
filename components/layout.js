@@ -9,9 +9,9 @@ export const siteTitle = 'Next.jsの勉強を生中継するブログ';
 
 const name = 'SUGAWARA Masaya';
 
-const NavLink = ({ href, title, mr }) => (
+const NavLink = ({ href, sx, ...props }) => (
   <Link href={href}>
-    <a sx={{ fontSize: [1, 4], fontWeight: 'bold', mr: mr }}>{title}</a>
+    <a sx={{ fontSize: [1, 4], fontWeight: 'bold' }} {...props} />
   </Link>
 );
 
@@ -40,10 +40,15 @@ const Layout = ({ children, home }) => {
             alignItems: 'center',
           }}
         >
-          <NavLink href="/" title="Hello" />
+          <NavLink href="/">Hello</NavLink>
           <div sx={{ mx: 'auto' }} />
-          <NavLink href="/blog" title="Blog" mr={6} />
-          <NavLink href="/about" title="About" />
+          <NavLink href="/blog" sx={{ mr: 6 }}>
+            Blog
+          </NavLink>
+          <NavLink href="/about">About</NavLink>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
         </Container>
       </header>
 

@@ -7,13 +7,14 @@ import Link from 'next/link';
 import Date from '../components/date';
 import { Heading1, Body1, Caption } from '../components/typography';
 
-export default function Home({ allPostsData }) {
+const Home = ({ allPostsData }) => {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <Container>
+        <Heading1>SUGAWARA Masaya</Heading1>
         <Link href="/works/css_pattern">
           <a>3種のCSS</a>
         </Link>
@@ -75,13 +76,15 @@ export default function Home({ allPostsData }) {
       </Container>
     </Layout>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
+
+export default Home;

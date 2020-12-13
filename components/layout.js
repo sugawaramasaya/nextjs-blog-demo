@@ -1,20 +1,28 @@
+/** @jsx jsx */
+import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import { Container } from 'theme-ui';
 
-const name = 'SUGAWARA Masaya';
 export const siteTitle = 'Next.jsの勉強を生中継するブログ';
 
-export default function Layout({ children, home }) {
+const name = 'SUGAWARA Masaya';
+
+const NavLink = ({ href, title, mr }) => (
+  <Link href={href}>
+    <a sx={{ fontSize: [1, 4], fontWeight: 'bold', mr: mr }}>{title}</a>
+  </Link>
+);
+
+const Layout = ({ children, home }) => {
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="老兵WebデザイナーがNext.jsの勉強を生中継するブログ"
+          content="デザイナーがNext.jsの勉強を生中継するブログ"
         />
         <meta
           property="og:image"
@@ -25,6 +33,20 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <header>
+        <Container
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <NavLink href="/" title="Hello" />
+          <div sx={{ mx: 'auto' }} />
+          <NavLink href="/blog" title="Blog" mr={6} />
+          <NavLink href="/about" title="About" />
+        </Container>
+      </header>
+
       <header className={styles.header}>
         {home ? (
           <>
@@ -66,4 +88,6 @@ export default function Layout({ children, home }) {
       )}
     </>
   );
-}
+};
+
+export default Layout;

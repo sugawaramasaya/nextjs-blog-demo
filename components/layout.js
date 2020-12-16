@@ -2,12 +2,10 @@
 import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Header from './header';
 
 export const siteTitle = 'Next.jsの勉強を生中継するブログ';
-
-const name = 'SUGAWARA Masaya';
 
 const Layout = ({ children, home }) => {
   return (
@@ -27,55 +25,7 @@ const Layout = ({ children, home }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        <Container
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <Link href="/">
-            <a className={styles.headerNavLink}>Hello</a>
-          </Link>
-          <div sx={{ mx: 'auto' }} />
-          <Link href="/blog">
-            <a className={styles.headerNavLink}>Blog</a>
-          </Link>
-          <Link href="/about">
-            <a className={styles.headerNavLink}>About</a>
-          </Link>
-        </Container>
-      </header>
-
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      {home ? <Header home /> : <Header />}
       <main>{children}</main>
       {!home && (
         <Container>

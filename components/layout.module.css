@@ -10,6 +10,16 @@
   align-items: center;
 }
 
+.headerNavLink {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.headerNavLink:nth-of-type(2) {
+  margin-right: 24px;
+}
+
 .headerImage {
   width: 6rem;
   height: 6rem;
@@ -22,4 +32,10 @@
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .headerNavLink {
+    font-size: 20px;
+  }
 }

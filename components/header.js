@@ -10,29 +10,34 @@ const Header = ({ home }) => {
   return (
     <header>
       <Container>
-        <Flex>
+        <Flex sx={{ my: 5 }}>
           <Link href="/">
             <a className={styles.navLink}>Hello</a>
           </Link>
           <div sx={{ mx: 'auto' }} />
-          <Link href="/blog">
-            <a className={styles.navLink}>Blog</a>
-          </Link>
           <Link href="/about">
             <a className={styles.navLink}>About</a>
+          </Link>
+          <Link href="/work">
+            <a className={styles.navLink}>Work</a>
+          </Link>
+          <Link href="/blog">
+            <a className={styles.navLink}>Blog</a>
           </Link>
         </Flex>
       </Container>
       {home && (
         <>
-          <Flex sx={{ alignItems: 'center', flexDirection: 'column' }}>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.homeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </Flex>
+          <Container>
+            <Flex sx={{ alignItems: 'center', flexDirection: 'column' }}>
+              <img
+                src="/images/profile.jpg"
+                className={`${styles.homeImage} ${utilStyles.borderCircle}`}
+                alt={name}
+              />
+              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            </Flex>
+          </Container>
         </>
       )}
     </header>

@@ -2,21 +2,20 @@
 import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import Link from 'next/link';
+import { Heading1, Body1 } from '../components/typography';
 
-const Home = () => {
+const About = () => {
   return (
-    <Layout home>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{siteTitle} / About</title>
       </Head>
       <Container>
-        <Link href="/works/css_pattern">
-          <a>3種のCSS</a>
-        </Link>
+        <Heading1>About</Heading1>
+        <Body1>ワイや</Body1>
       </Container>
     </Layout>
   );
 };
 
-export default Home;
+export default About;

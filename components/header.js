@@ -23,35 +23,18 @@ const Header = ({ home }) => {
           </Link>
         </Flex>
       </Container>
-      <Flex sx={{ alignItems: 'center', flexDirection: 'column' }}>
-        {home ? (
-          <>
+      {home && (
+        <>
+          <Flex sx={{ alignItems: 'center', flexDirection: 'column' }}>
             <img
               src="/images/profile.jpg"
               className={`${styles.homeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.image} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </Flex>
+          </Flex>
+        </>
+      )}
     </header>
   );
 };

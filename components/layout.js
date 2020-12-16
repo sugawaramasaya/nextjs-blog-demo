@@ -1,9 +1,6 @@
-/** @jsx jsx */
-import { jsx, Container } from 'theme-ui';
 import Head from 'next/head';
-import styles from './layout.module.css';
-import Link from 'next/link';
 import Header from './header';
+import BackToHome from './backToHome';
 
 export const siteTitle = 'Next.jsの勉強を生中継するブログ';
 
@@ -27,15 +24,7 @@ const Layout = ({ children, home }) => {
       </Head>
       {home ? <Header home /> : <Header />}
       <main>{children}</main>
-      {!home && (
-        <Container>
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        </Container>
-      )}
+      {!home && <BackToHome />}
     </>
   );
 };

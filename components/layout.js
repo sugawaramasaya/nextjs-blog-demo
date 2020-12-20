@@ -1,5 +1,8 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import Head from 'next/head';
 import Header from './header';
+import Footer from './footer';
 import BackToHome from './backToHome';
 
 export const siteTitle = 'Next.jsの勉強を生中継するブログ';
@@ -22,9 +25,26 @@ const Layout = ({ children, home }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {home ? <Header home /> : <Header />}
-      <main>{children}</main>
-      {!home && <BackToHome />}
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          // set this to `minHeight: '100vh'` for full viewport height
+          minHeight: '100vh',
+        }}
+      >
+        {home ? <Header home /> : <Header />}
+        <main
+          sx={{
+            width: '100%',
+            flex: '1 1 auto',
+          }}
+        >
+          {children}
+        </main>
+        {!home && <BackToHome />}
+        <Footer />
+      </div>
     </>
   );
 };

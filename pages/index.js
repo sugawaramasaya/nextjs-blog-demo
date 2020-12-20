@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Grid, Box, AspectRatio } from 'theme-ui';
+import { jsx, Container, Grid, Box, AspectRatio, Text } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { Caption } from '../components/typography';
@@ -26,11 +26,18 @@ const ThumbImage = ({ src, alt, href }) => (
 const Thumb = ({ src, alt, href, title }) => (
   <Box>
     <ThumbImage src={src} alt={alt} href={href} />
-    <Caption sx={{ mt: 4, mb: 0 }}>
+    <Text
+      sx={{
+        fontSize: 1,
+        fontWeight: 'bold',
+        mt: 3,
+        mb: 0,
+      }}
+    >
       <Link href={href}>
-        <a>{title}</a>
+        <a style={{ textDecoration: 'none' }}>{title}</a>
       </Link>
-    </Caption>
+    </Text>
   </Box>
 );
 
@@ -41,7 +48,7 @@ const Home = () => {
         <title>{siteTitle}</title>
       </Head>
       <Container>
-        <Grid gap={[0, 7]} columns={[1, 3]}>
+        <Grid gap={7} columns={[1, 3, 4]}>
           <Thumb
             src="/images/mountains.jpg"
             alt="Mountains"
@@ -85,9 +92,6 @@ const Home = () => {
             title="きききき"
           />
         </Grid>
-        <Link href="/works/css_pattern">
-          <a>3種のCSS</a>
-        </Link>
       </Container>
     </Layout>
   );

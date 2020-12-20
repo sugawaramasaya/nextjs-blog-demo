@@ -1,9 +1,38 @@
 /** @jsx jsx */
-import { jsx, Container, Grid, Flex, Box } from 'theme-ui';
+import { jsx, Container, Grid, Box, AspectRatio } from 'theme-ui';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
+import { Caption } from '../components/typography';
 import Link from 'next/link';
 import Image from 'next/image';
+
+const ThumbImage = ({ src, alt, href }) => (
+  <AspectRatio ratio={1}>
+    <Link href={href}>
+      <a>
+        <Image
+          src={src}
+          alt={alt}
+          layout="responsive"
+          width={768}
+          height={768}
+          sx={{ objectFit: 'cover' }}
+        />
+      </a>
+    </Link>
+  </AspectRatio>
+);
+
+const Thumb = ({ src, alt, href, title }) => (
+  <Box>
+    <ThumbImage src={src} alt={alt} href={href} />
+    <Caption sx={{ mt: 4, mb: 0 }}>
+      <Link href={href}>
+        <a>{title}</a>
+      </Link>
+    </Caption>
+  </Box>
+);
 
 const Home = () => {
   return (
@@ -12,119 +41,49 @@ const Home = () => {
         <title>{siteTitle}</title>
       </Head>
       <Container>
-        以下はFlexbox（Rebassとちがい実質Gridじゃないとレイアウトできないっぽい）
-        <Flex sx={{ flexWrap: 'wrap', alignItems: 'center', mx: -5 }}>
-          <Box sx={{ flex: 1, bg: 'background', px: 5 }}>
-            <Image
-              src="/images/mountains.jpg"
-              alt="Mountains"
-              width={2800}
-              height={1900}
-            />
-            ああああああああ
-          </Box>
-          <Box sx={{ flex: 1, bg: 'background', px: 5 }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            いいいい
-          </Box>
-          <Box sx={{ flex: 1, bg: 'background', px: 5 }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            ううううう
-          </Box>
-          <Box sx={{ flex: 1, bg: 'background', px: 5 }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            えええええええええ
-          </Box>
-          <Box sx={{ flex: 1, bg: 'background', px: 5 }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            おおおおおお
-          </Box>
-        </Flex>
-        以下はGrid
-        <Grid gap={[0, 7]} columns={[1, 3, 4]}>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/mountains.jpg"
-              alt="Mountains"
-              width={2800}
-              height={1900}
-            />
-            ああああああああ
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            いいいい
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            ううううう
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            えええええええええ
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            おおおおおお
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            かかかかかかかかかかか
-          </Box>
-          <Box sx={{ bg: 'background' }}>
-            <Image
-              src="/images/dummy.jpg"
-              alt="Picture of the author"
-              width={768}
-              height={768}
-            />
-            きききき
-          </Box>
+        <Grid gap={[0, 7]} columns={[1, 3]}>
+          <Thumb
+            src="/images/mountains.jpg"
+            alt="Mountains"
+            href="/works/css_pattern"
+            title="あああああああ"
+          />
+          <Thumb
+            src="/images/photo.jpg"
+            alt="photo"
+            href="/works/css_pattern"
+            title="いいいい"
+          />
+          <Thumb
+            src="/images/aeta_teaser_3/05.png"
+            alt="Picture of the author"
+            href="/works/css_pattern"
+            title="ううううう"
+          />
+          <Thumb
+            src="/images/dummy.jpg"
+            alt="Picture of the author"
+            href="/works/css_pattern"
+            title="えええええええええ"
+          />
+          <Thumb
+            src="/images/dummy.jpg"
+            alt="Picture of the author"
+            href="/works/css_pattern"
+            title="おおおおおお"
+          />
+          <Thumb
+            src="/images/dummy.jpg"
+            alt="Picture of the author"
+            href="/works/css_pattern"
+            title="かかかかかかかかかかか"
+          />
+          <Thumb
+            src="/images/dummy.jpg"
+            alt="Picture of the author"
+            href="/works/css_pattern"
+            title="きききき"
+          />
         </Grid>
         <Link href="/works/css_pattern">
           <a>3種のCSS</a>

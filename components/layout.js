@@ -38,6 +38,7 @@ const Layout = ({ children, home }) => {
           sx={{
             width: '100%',
             flex: '1 1 auto',
+            mt: [10, 11],
           }}
         >
           {children}

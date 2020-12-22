@@ -11,7 +11,7 @@ const About = () => {
         <title>{siteTitle} / About</title>
       </Head>
       <Container>
-        <Heading1>About</Heading1>
+        <Heading1 sx={{ mt: 0 }}>About</Heading1>
         <Body1>ワイや</Body1>
       </Container>
     </Layout>

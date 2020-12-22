@@ -11,7 +11,7 @@ const Work = () => {
         <title>{siteTitle} / Work</title>
       </Head>
       <Container>
-        <Heading1>Work</Heading1>
+        <Heading1 sx={{ mt: 0 }}>Work</Heading1>
         <Body1>ここやで</Body1>
       </Container>
     </Layout>
